@@ -1,5 +1,5 @@
 import React from 'react'
-import Background from '../assets/images/swamp.jpg'
+import Background from '../assets/images/coolcar.jpg'
 
 
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
       className='flex flex-row justify-center mx-auto bg-cover bg-fixed'
       >
         <div className='flex place-items-center h-screen'>
-          <h3 className='p-5 bg-white bg-opacity-50 text-black rounded'>Welcome to your Car Inventory</h3>
+          <h3 className='p-9 bg-black bg-opacity-70 text-gray-300 rounded'>Welcome to your Car Inventory</h3>
         </div>
     </div>
   )

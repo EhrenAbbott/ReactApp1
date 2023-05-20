@@ -60,6 +60,7 @@ export const server_calls = {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json',
+                'x-access-token': `Bearer ${token}`
             }
         })
 

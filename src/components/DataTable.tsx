@@ -15,7 +15,7 @@ const columns: GridColDef[] = [
 
 function DataTable() {
   const [ open, setOpen ] = useState(false);
-  const { contactData, getData } = useGetData();
+  const { carData, getData } = useGetData();
   const [ selectionModel, setSelectionModel ] = useState<string[]>([])
 
   const handleOpen = () => {
@@ -43,20 +43,20 @@ function DataTable() {
         <div className='flex flex-row'>
             <div>
                 <button
-                    className='p-3 bg-slate-300 m-3 rounded hover:bg-slate-800 hover:text-white'
+                    className='p-3 bg-black text-white m-3 rounded hover:bg-red-800 hover:text-black'
                     onClick={() => handleOpen()}
                 >
                     Create New Car
                 </button>
             </div>
-            <Button onClick={handleOpen} className="p-3 bg-slate-300 m-3 rounded hover:bg-slate-800 hover:text-white" >Update</Button>
-            <Button onClick={deleteData} className="p-3 bg-slate-300 m-3 rounded hover:bg-slate-800 hover:text-white" >Delete</Button>
+            <Button onClick={handleOpen} className="p-3 bg-black m-3 text-white rounded hover:bg-red-800 hover:text-black" >Update</Button>
+            <Button onClick={deleteData} className="p-3 bg-black m-3 text-white rounded hover:bg-red-800 hover:text-black" >Delete</Button>
         </div>
         <div className={ open ? "hidden" : "container mx-10 my-5 flex flex-col"}
           style={{ height: 400, width: '100%' }}
           >
-            <h2 className="p-3 bg-slate-300 my-2 rounded">My Cars</h2>
-            <DataGrid rows={contactData} columns={columns} rowsPerPageOptions={[5]}
+            <h2 className="p-3 bg-red-800 my-2 rounded">My Cars</h2>
+            <DataGrid rows={carData} columns={columns} rowsPerPageOptions={[5]}
             checkboxSelection={true} 
             onSelectionModelChange={ (item:any) => {
               setSelectionModel(item)
